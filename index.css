@@ -72,6 +72,11 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 /* end css reset */
 @font-face {
   font-family: "Open_Sans";
@@ -80,7 +85,14 @@ textarea:not([rows]) {
 
 @font-face {
   font-family: "Poppins";
+  font-weight: 400;
   src: url("fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url("fonts/Poppins/Poppins-SemiBold.ttf");
 }
 
 :root {
@@ -168,18 +180,18 @@ footer {
   filter: invert(100%);
 }
 
-.socials > a {
+.socials li {
   border: 1px solid white;
   padding: .5rem;
   border-radius: 50%;
 }
 
-.socials > a:hover {
+.socials li:hover {
   cursor: pointer;
   border: 1px solid var(--soft-magenta)
 }
 
-.socials > a:hover > img {
+.socials li:hover img {
   /*to make the black images magenta */
   filter: brightness(0) saturate(100%) invert(78%) sepia(47%) saturate(3049%) hue-rotate(250deg) brightness(102%) contrast(82%);
 }
@@ -194,9 +206,9 @@ footer {
     gap: 4rem;
     display: grid;
     grid-template-areas:
-      "header header"
-      "content content"
-      "footer footer";
+      "header"
+      "content"
+      "footer";
     margin: 4rem;
   }
 
@@ -206,6 +218,7 @@ footer {
 
   .img-logo {
     margin: 0;
+    width: 15rem;
   }
 
   main {
@@ -233,11 +246,14 @@ footer {
 
   .title {
     text-align: left;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+    font-weight: 600;
   }
 
   .description {
     text-align: left;
+    line-height: 1.5rem;
   }
 
   .register-wrapper {
